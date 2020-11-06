@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ---- NAVIGATION ---- */
+
+.nav {
+  background-color: rgb(27, 27, 27);
+  color: rgb(226, 226, 226);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 3rem;
+}
+
+/* ---- INTRO SECTION ---- */
+
+.intro-sec {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  padding-top: 50vh;
+  width: 100%;
+  height: 50vh;
+  font-size: 5rem;
+  background-color: rgb(27, 27, 27);
+  color: rgb(226, 226, 226);
+}
+
+.intro-sec p:last-child {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  padding-left: 700px;
+}
+
+@media (max-width: 1000px) {
+  .intro-sec {
+    font-size: 2rem;
+  }
+
+  .intro-sec p:last-child {
+    font-size: 1rem;
+    padding-left: 300px;
+  }
+}
+
+/* ---- Gametography Section ---- */
+
+.game-sec {
+  background-color: rgb(184, 184, 184);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background: white;
+  width: 500px;
+  height: 375px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.card .imgBox {
+  position: absolute;
+}
+
+.card .imgBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card .content {
+  position: relative;
+  padding-top: 300px;
+  text-align: center;
+}
+
+.content a {
+  color: black;
+}
+
+.content a:hover {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.content a:visited {
+  color: rgb(27, 27, 27);
+}
+
+@media (max-width: 1000px) {
+  .game-sec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    z-index: -1;
+  }
+
+  .card .content {
+    padding-top: 250px;
+    z-index: -1;
+  }
+
+  .card:first-child {
+    margin-bottom: 6rem;
+  }
+}
+
+/* ---- About Section ---- */
+
+.about-sec {
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  background-color: rgb(27, 27, 27);
+  color: rgb(226, 226, 226);
+}
+
+.about-sec img {
+  width: 200px;
+  display: flex;
+  justify-content: right;
+}
+
+.about-cont p:first-child {
+  margin: 50px 100px;
+  font-size: 1.5rem;
+}
+
+.stream h3 {
+  font-size: 3rem;
+  margin: 50px 100px;
+}
+
+.stream h3 a:hover {
+  font-family: "Press Start 2P", cursive;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+td,
+th {
+  border: 1px solid rgb(184, 184, 184);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  color: rgb(27, 27, 27);
+}
+
+/*---- Exterior Pages ----*/
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 9.95%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
